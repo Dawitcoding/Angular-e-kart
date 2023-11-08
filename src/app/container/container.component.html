@@ -1,0 +1,31 @@
+<!-- <div class="ekart--product--container">
+    <img [src]="product.pImage" alt="iphone" />
+    <p>Name: {{ product.name }}</p>
+    <p>Price: {{ "$" + product.price }}</p>
+    <p>Color: {{ product.color }}</p>
+    <p>Discount-Price: {{ getDiscountedPrice().toFixed(2) }}</p>
+    <p>
+      {{
+        product.inStock > 0
+          ? "only " + product.inStock + " items left"
+          : "non item in stock"
+      }}
+    </p>
+    < <input type="text" (input)="onNameChange($event)" />
+    <p>name = {{ name }}</p>
+    <br /> -->
+    <!-- <button [disabled]="!(product.inStock > 0)">buy now</button> -->
+   <!-- <button (click)="decrementStockValue()" [disabled] = "( addToCart == 0 )">-</button>
+    <span> {{ addToCart }} </span>
+    <button (click)="incrementStockValue()" [disabled] = "( product.inStock == 0 )">+</button>
+</div> -->
+
+<!-- hidden, checked, disabled --  in the string interpolation does not work we use property binding -->
+
+ <div class="ekart--product--container">
+     <app-search (SearchTextChanged)="setSearchText($event)"></app-search>
+     <product-list [searchText]="searchText"></product-list>
+     <!-- <div *ngFor = "let item of listOfString">
+      <p>Current element of item is: {{ item }}</p>
+     </div> -->
+ </div>
